@@ -41,4 +41,14 @@ class Cart extends Model
     {
         return $this->hasOne(User::class);
     }
+
+    /**
+     * Get all of the details for the Cart
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function details(): HasMany
+    {
+        return $this->hasMany(Detail::class);
+    }
 }
