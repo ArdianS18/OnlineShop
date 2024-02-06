@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
-            $table->foreignId('cart_id')->constrained();
             $table->string('photo_evidence'); // bukti verifikasi pembayaran berupa foto
             $table->enum('stat',['Diterima', 'Ditolak', 'Pemesanan'])->default('Pemesanan'); // verifikasi pembayaran dengan admin
             $table->timestamps();

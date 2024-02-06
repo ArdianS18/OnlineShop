@@ -23,16 +23,6 @@ class Cart extends Model
     }
 
     /**
-     * Get all of the payments for the Cart
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function payments(): HasMany
-    {
-        return $this->hasMany(Payment::class);
-    }
-
-    /**
      * Get the user associated with the Cart
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne

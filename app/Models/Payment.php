@@ -13,16 +13,6 @@ class Payment extends Model
     use HasFactory;
 
     /**
-     * Get the cart that owns the Payment
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function cart(): BelongsTo
-    {
-        return $this->belongsTo(Cart::class);
-    }
-
-        /**
      * Get the user associated with the Cart
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
